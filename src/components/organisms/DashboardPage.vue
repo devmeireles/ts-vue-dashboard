@@ -1,11 +1,13 @@
 <template>
-  <h1>products</h1>
+  <v-container>
+    <slot />
+  </v-container>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "ListCategoryView",
+  name: "DashboardPage",
 });
 </script>

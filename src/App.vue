@@ -1,11 +1,21 @@
 <template>
-  <v-app :theme="layoutStore.currentTheme">
+  <v-app :theme="coreStore.currentTheme">
     <router-view />
   </v-app>
 </template>
 
-<script lang="ts" setup>
-import { useLayoutStore } from "@/stores/layout";
+<script lang="ts">
+import { defineComponent } from "vue";
+import { useCoreStore } from "@/stores/core";
 
-const layoutStore = useLayoutStore();
+export default defineComponent({
+  name: "App",
+  setup() {
+    const coreStore = useCoreStore();
+
+    return {
+      coreStore,
+    };
+  },
+});
 </script>

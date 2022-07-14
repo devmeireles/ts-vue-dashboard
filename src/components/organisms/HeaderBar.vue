@@ -1,8 +1,8 @@
 <template>
-  <v-app-bar app>
+  <v-app-bar app elevation="1">
     <v-app-bar-nav-icon @click="toggleSidebar()"></v-app-bar-nav-icon>
 
-    <v-toolbar-title>Application</v-toolbar-title>
+    <v-toolbar-title>{{ $t("core.hello") }}</v-toolbar-title>
 
     <v-spacer></v-spacer>
 
@@ -22,6 +22,7 @@ export default {
   props: {
     toggleSidebar: Function,
     toggleTheme: Function,
+    toggleLanguage: Function,
   },
 };
 </script>

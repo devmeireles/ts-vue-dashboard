@@ -1,0 +1,17 @@
+{
+  "core": {
+    "title": "English",
+    "hello": "Hello",
+    "dashboard": "Dashboard",
+    "category": "Category",
+    "tag": "Tag",
+    "product": "Product",
+    "settings": "Settings"
+  },
+  "actions": {
+    "open": "Open",
+    "close": "Close",
+    "create": "Create",
+    "list": "List"
+  }
+}

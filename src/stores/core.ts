@@ -1,11 +1,11 @@
 import { defineStore } from "pinia";
 
-export const useLayoutStore = defineStore({
-  id: "layout",
+export const useCoreStore = defineStore({
+  id: "core",
   state: () => ({
-    isOpenSidebar: false,
+    isOpenSidebar: true,
     theme: "light",
-    language: "english",
+    language: "en",
   }),
   getters: {
     sidebarState: (state) => state.isOpenSidebar,
@@ -20,7 +20,8 @@ export const useLayoutStore = defineStore({
       this.theme = this.theme === "light" ? "dark" : "light";
     },
     toggleLanguage() {
-      this.language = this.language === "english" ? "portuguse" : "english";
+      this.language = this.language === "en" ? "pt" : "en";
+      console.log(this.language);
     },
   },
 });

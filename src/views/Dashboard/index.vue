@@ -1,21 +1,30 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 
 <template>
+  <Sidebar :isOpenSidebar="store.sidebarState" />
   <HeaderBar
     :toggleSidebar="store.toggleSidebar"
     :toggleTheme="store.toggleTheme"
     :toggleLanguage="store.toggleLanguage"
   />
-  <Sidebar :isOpenSidebar="store.sidebarState" />
-  <v-main>
-    <router-view />
+  <v-main class="main">
+    <DashboardPage>
+      <router-view />
+    </DashboardPage>
   </v-main>
 </template>
 
 <script lang="ts" setup>
-import { useLayoutStore } from "@/stores/layout";
-import Sidebar from "../../components/organisms/Sidebar.vue";
-import HeaderBar from "../../components/organisms/HeaderBar.vue";
+import { useCoreStore } from "@/stores/core";
+import Sidebar from "@/components/organisms/Sidebar.vue";
+import HeaderBar from "@/components/organisms/HeaderBar.vue";
+import DashboardPage from "@/components/organisms/DashboardPage.vue";
 
-const store = useLayoutStore();
+const store = useCoreStore();
 </script>
+
+<style lang="scss" scoped>
+.main {
+  background-color: #f4f4f4;
+}
+</style>
