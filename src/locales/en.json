@@ -6,7 +6,9 @@
     "category": "Category",
     "tag": "Tag",
     "product": "Product",
-    "settings": "Settings"
+    "settings": "Settings",
+    "account": "Account",
+    "logout": "Logout"
   },
   "actions": {
     "open": "Open",

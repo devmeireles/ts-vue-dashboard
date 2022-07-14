@@ -6,17 +6,20 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn icon @click="toggleTheme()">
+    <AvatarMenu />
+
+    <!-- <v-btn icon @click="toggleTheme()">
       <v-icon>mdi-brightness-4</v-icon>
     </v-btn>
 
     <v-btn icon @click="toggleLanguage()">
       <v-icon>mdi-translate</v-icon>
-    </v-btn>
+    </v-btn> -->
   </v-app-bar>
 </template>
 
 <script lang="ts">
+import AvatarMenu from "@/components/organisms/AvatarMenu.vue";
 export default {
   name: "HeaderBar",
   props: {
@@ -24,5 +27,6 @@ export default {
     toggleTheme: Function,
     toggleLanguage: Function,
   },
+  components: { AvatarMenu },
 };
 </script>
