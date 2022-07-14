@@ -2,15 +2,15 @@
   <v-menu bottom min-width="300px" rounded offset-y>
     <template v-slot:activator="{ props }">
       <v-btn icon v-bind="props">
-        <UserAvatar img="https://cdn.vuetifyjs.com/images/john.jpg" />
+        <UserAvatar :img="image" :initials="initials" />
       </v-btn>
     </template>
     <v-card width="300px">
       <v-list>
         <v-list-item>
           <UserAvatar
-            img="https://cdn.vuetifyjs.com/images/john.jpg"
-            content="Gabriel Meireles"
+            :img="image"
+            :content="name"
             size="60"
             caption-size="text-body-1"
             caption-weight="font-weight-medium"
@@ -45,6 +45,11 @@ import UserAvatar from "../molecules/UserAvatar.vue";
 
 export default {
   name: "AvatarMenu",
+  props: {
+    name: String,
+    image: String,
+    initials: String,
+  },
   data: () => ({
     menu: [
       {
@@ -63,11 +68,6 @@ export default {
         icon: "mdi-logout",
       },
     ],
-    user: {
-      initials: "JD",
-      fullName: "John Doe",
-      email: "john.doe@doe.com",
-    },
   }),
   components: { UserAvatar },
 };

@@ -2,7 +2,9 @@
   <div class="d-flex flex-row items-center">
     <v-avatar :color="color" :size="size">
       <v-img v-if="img" :src="img"></v-img>
-      <span v-if="initials" class="text-white text-body">{{ initials }}</span>
+      <span v-if="initials && !img" class="text-white text-body">{{
+        initials
+      }}</span>
     </v-avatar>
 
     <div class="d-flex flex-row align-self-center pl-2">

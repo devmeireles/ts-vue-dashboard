@@ -6,7 +6,11 @@
 
     <v-spacer></v-spacer>
 
-    <AvatarMenu />
+    <AvatarMenu
+      :name="userData.fullName"
+      :image="userData.image"
+      :initials="userData.initials"
+    />
 
     <!-- <v-btn icon @click="toggleTheme()">
       <v-icon>mdi-brightness-4</v-icon>
@@ -26,6 +30,7 @@ export default {
     toggleSidebar: Function,
     toggleTheme: Function,
     toggleLanguage: Function,
+    userData: Object,
   },
   components: { AvatarMenu },
 };

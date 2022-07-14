@@ -1,7 +1,13 @@
 <!-- eslint-disable vue/no-mutating-props -->
 <template>
   <v-navigation-drawer v-model="isOpenSidebar" app>
-    <v-card class="mx-auto" width="300" elevation="0">
+    <div class="d-flex flex-row justify-center pa-5">
+      <img src="@/assets/logo.png" width="150" class="pa-5" />
+    </div>
+
+    <v-divider></v-divider>
+
+    <v-card class="mx-auto pt-5" width="300" elevation="0">
       <v-list v-model:opened="open">
         <v-list-item
           prepend-icon="mdi-view-dashboard-outline"
