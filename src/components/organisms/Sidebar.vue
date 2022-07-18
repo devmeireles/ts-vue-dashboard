@@ -9,10 +9,12 @@
 
     <v-card class="mx-auto pt-5" width="300" elevation="0">
       <v-list v-model:opened="open">
-        <v-list-item
-          prepend-icon="mdi-view-dashboard-outline"
-          :title="$t('core.dashboard')"
-        ></v-list-item>
+        <RouterLink to="/dashboard" class="menu-link">
+          <v-list-item
+            prepend-icon="mdi-view-dashboard-outline"
+            :title="$t('core.dashboard')"
+          ></v-list-item>
+        </RouterLink>
 
         <v-list-group v-for="item in menu" :key="item.name">
           <template v-slot:activator="{ props }">

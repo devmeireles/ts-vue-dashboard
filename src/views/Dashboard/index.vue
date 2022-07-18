@@ -26,10 +26,6 @@ const store = useCoreStore();
 const user = useUserStore();
 </script>
 
-<style>
-@import url("@/assets/base.css");
-</style>
-
 <style lang="scss" scoped>
 .main {
   background-color: #f4f4f4;

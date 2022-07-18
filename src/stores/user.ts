@@ -5,7 +5,7 @@ export const useUserStore = defineStore({
   state: () => ({
     user: {
       initials: "GM",
-      fullName: "Gabriel Meirele",
+      fullName: "Gabriel Meireles",
       email: "gabriel@temp.com",
       image: "https://cdn.vuetifyjs.com/images/john.jpg",
     },

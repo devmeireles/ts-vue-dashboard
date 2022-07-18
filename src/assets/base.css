@@ -39,6 +39,17 @@
   --section-gap: 160px;
 }
 
+
+/** Used on RouterLink */
+.menu-link {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--vt-c-black);
@@ -74,17 +85,4 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-
-
-/** Used on RouterLink */
-.menu-link {
-  display: flex;
-  align-content: center;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  color: #181818;
-  font-weight: 700;
 }

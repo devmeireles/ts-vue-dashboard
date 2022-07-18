@@ -1,7 +1,5 @@
 {
   "core": {
-    "title": "English",
-    "hello": "Hello",
     "dashboard": "Dashboard",
     "category": "Category",
     "tag": "Tag",

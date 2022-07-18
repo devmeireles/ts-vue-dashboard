@@ -19,3 +19,7 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+@import url("@/assets/base.css");
+</style>

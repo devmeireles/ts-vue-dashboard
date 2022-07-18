@@ -13,6 +13,27 @@ const router = createRouter({
       component: DashboardView,
       children: [
         {
+          path: "",
+          name: "dashboard",
+          component: ListCategory,
+        },
+        {
+          path: "product",
+          name: "product",
+          children: [
+            {
+              path: "",
+              name: "product-index",
+              component: ListCategory,
+            },
+            {
+              path: "create",
+              name: "product-create",
+              component: CreateCategory,
+            },
+          ],
+        },
+        {
           path: "category",
           name: "category",
           children: [
