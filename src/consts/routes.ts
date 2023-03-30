@@ -1,6 +1,11 @@
 const MAIN_ROUTE = `/dashboard`;
+const AUTH_ROUTE = `/auth`;
 
 export const routes = {
+  auth: {
+    login: `${AUTH_ROUTE}/login`,
+    register: `${AUTH_ROUTE}/register`,
+  },
   product: {
     main: `${MAIN_ROUTE}/product`,
     create: `${MAIN_ROUTE}/product/create`,

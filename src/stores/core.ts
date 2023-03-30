@@ -24,4 +24,5 @@ export const useCoreStore = defineStore({
       console.log(this.language);
     },
   },
+  persist: true,
 });
